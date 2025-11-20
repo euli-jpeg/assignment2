@@ -1,39 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive US Map</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>US Interactive Map</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Explore the United States</h1>
-            <p>Click on any state to learn more</p>
-        </header>
 
-        <main>
-            <section class="map-section">
-                <img src="map.png" alt="US Map" usemap="#usa-map" class="map-image">
-                <map name="usa-map">
-                    <!-- New York: approximately pixels 825, 145 to 855, 180 -->
-                    <area shape="poly" coords="860,165,900,120,945,130,970,170,985,205,955,225,915,215,895,195" href="states/newyork.html" alt="New York" title="New York">
-                    
-                    <!-- Florida: approximately pixels 810, 360 to 840, 430 -->
-                    <area shape="poly" coords="810,600, 860,620, 900,625, 930,610, 900,570, 840,560" href="states/florida.html" alt="Florida" title="Florida">
-                    
-                    <!-- Texas: approximately pixels 470, 280 to 560, 380 -->
-                    <area shape="poly" coords="420,480, 570,480, 620,540, 710,540, 700,610, 590,600, 500,540" href="states/texas.html" alt="Texas" title="Texas">
-                    
-                    <!-- California: approximately pixels 200, 220 to 280, 340 -->
-                    <area shape="poly" coords="80,320, 220,200, 220,490, 120,580, 80,520" href="states/california.html" alt="California" title="California">
-                    
-                    <!-- Washington: approximately pixels 210, 100 to 270, 160 -->
-                    <area shape="poly" coords="60,60, 220,60, 250,130, 90,130" href="states/washington.html" alt="Washington" title="Washington">
-                </map>
-            </section>
-        </main>
+<!-- MAP PAGE -->
+<div id="map" class="page">
+  <div class="container">
+    <h1>Explore the United States</h1>
+    <p class="subtitle">Click on a state to learn more</p>
+    <img src="map.png" alt="US Map" usemap="#states" class="map-img">
+    <map name="states">
+      <area shape="poly" coords="60,60, 220,60, 250,130, 90,130" href="#washington" title="Washington">
+      <area shape="poly" coords="80,320, 220,200, 220,490, 120,580, 80,520" href="#california" title="California">
+      <area shape="poly" coords="420,480, 570,480, 620,540, 710,540, 700,610, 590,600, 500,540" href="#texas" title="Texas">
+      <area shape="poly" coords="810,600, 860,620, 900,625, 930,610, 900,570, 840,560" href="#florida" title="Florida">
+      <area shape="poly" coords="860,165,900,120,945,130,970,170,985,205,955,225,915,215,895,195" href="#newyork" title="New York">
+    </map>
+  </div>
+</div>
+
+<!-- WASHINGTON -->
+<div id="washington" class="page state">
+  <div class="container">
+    <h1>Washington</h1>
+    <p class="subtitle">The Evergreen State</p>
+    <a href="#map" class="btn">← Back to Map</a>
+    <div class="grid">
+      <div class="box"><h2>Overview</h2><p>Washington is in the Pacific Northwest with natural beauty, mountains, and forests.</p></div>
+      <div class="box"><h2>Facts</h2><ul><li>Capital: Olympia</li><li>Population: ~7.7M</li><li>Founded: 1889</li></ul></div>
+      <div class="box"><h2>Attractions</h2><ul><li>Mount Rainier</li><li>Space Needle</li><li>Columbia River</li></ul></div>
+      <div class="box"><h2>Culture</h2><ul><li>Coffee</li><li>Salmon</li><li>Native Art</li></ul></div>
     </div>
+  </div>
+</div>
+
+<!-- CALIFORNIA -->
+<div id="california" class="page state">
+  <div class="container">
+    <h1>California</h1>
+    <p class="subtitle">The Golden State</p>
+    <a href="#map" class="btn">← Back to Map</a>
+    <div class="grid">
+      <div class="box"><h2>Overview</h2><p>Most populous state, known for beaches, deserts, mountains, and technology.</p></div>
+      <div class="box"><h2>Facts</h2><ul><li>Capital: Sacramento</li><li>Population: ~39.5M</li><li>Founded: 1850</li></ul></div>
+      <div class="box"><h2>Attractions</h2><ul><li>Disneyland</li><li>Golden Gate Bridge</li><li>Yosemite</li></ul></div>
+      <div class="box"><h2>Culture</h2><ul><li>Wine</li><li>Avocados</li><li>Mexican Food</li></ul></div>
+    </div>
+  </div>
+</div>
+
+<!-- TEXAS -->
+<div id="texas" class="page state">
+  <div class="container">
+    <h1>Texas</h1>
+    <p class="subtitle">The Lone Star State</p>
+    <a href="#map" class="btn">← Back to Map</a>
+    <div class="grid">
+      <div class="box"><h2>Overview</h2><p>Second largest state by area and population, known for ranching, oil, and BBQ.</p></div>
+      <div class="box"><h2>Facts</h2><ul><li>Capital: Austin</li><li>Population: ~29.1M</li><li>Founded: 1845</li></ul></div>
+      <div class="box"><h2>Attractions</h2><ul><li>The Alamo</li><li>Big Bend Park</li><li>Fort Worth</li></ul></div>
+      <div class="box"><h2>Culture</h2><ul><li>BBQ</li><li>Tex-Mex</li><li>Cowboy Heritage</li></ul></div>
+    </div>
+  </div>
+</div>
+
+<!-- FLORIDA -->
+<div id="florida" class="page state">
+  <div class="container">
+    <h1>Florida</h1>
+    <p class="subtitle">The Sunshine State</p>
+    <a href="#map" class="btn">← Back to Map</a>
+    <div class="grid">
+      <div class="box"><h2>Overview</h2><p>Known for warm climate, beaches, and theme parks. Major tourist destination.</p></div>
+      <div class="box"><h2>Facts</h2><ul><li>Capital: Tallahassee</li><li>Population: ~22M</li><li>Founded: 1845</li></ul></div>
+      <div class="box"><h2>Attractions</h2><ul><li>Disney World</li><li>Universal Studios</li><li>Miami Beach</li></ul></div>
+      <div class="box"><h2>Culture</h2><ul><li>Seafood</li><li>Cuban Food</li><li>Beach Life</li></ul></div>
+    </div>
+  </div>
+</div>
+
+<!-- NEW YORK -->
+<div id="newyork" class="page state">
+  <div class="container">
+    <h1>New York</h1>
+    <p class="subtitle">The Empire State</p>
+    <a href="#map" class="btn">← Back to Map</a>
+    <div class="grid">
+      <div class="box"><h2>Overview</h2><p>Home to NYC, a global center of finance, arts, culture, and urban life.</p></div>
+      <div class="box"><h2>Facts</h2><ul><li>Capital: Albany</li><li>Population: ~19.5M</li><li>Founded: 1788</li></ul></div>
+      <div class="box"><h2>Attractions</h2><ul><li>Statue of Liberty</li><li>Times Square</li><li>Niagara Falls</li></ul></div>
+      <div class="box"><h2>Culture</h2><ul><li>Pizza</li><li>Bagels</li><li>Broadway</li></ul></div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
