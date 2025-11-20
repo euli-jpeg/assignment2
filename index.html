@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive US Map</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Explore the United States</h1>
+            <p>Click on any state to learn more</p>
+        </header>
+
+        <main>
+            <section class="map-section">
+                <img src="map.png" alt="US Map" usemap="#usa-map" class="map-image">
+                <map name="usa-map">
+                    <!-- New York: approximately pixels 825, 145 to 855, 180 -->
+                    <area shape="poly" coords="860,165,900,120,945,130,970,170,985,205,955,225,915,215,895,195" href="states/newyork.html" alt="New York" title="New York">
+                    
+                    <!-- Florida: approximately pixels 810, 360 to 840, 430 -->
+                    <area shape="poly" coords="810,600, 860,620, 900,625, 930,610, 900,570, 840,560" href="states/florida.html" alt="Florida" title="Florida">
+                    
+                    <!-- Texas: approximately pixels 470, 280 to 560, 380 -->
+                    <area shape="poly" coords="420,480, 570,480, 620,540, 710,540, 700,610, 590,600, 500,540" href="states/texas.html" alt="Texas" title="Texas">
+                    
+                    <!-- California: approximately pixels 200, 220 to 280, 340 -->
+                    <area shape="poly" coords="80,320, 220,200, 220,490, 120,580, 80,520" href="states/california.html" alt="California" title="California">
+                    
+                    <!-- Washington: approximately pixels 210, 100 to 270, 160 -->
+                    <area shape="poly" coords="60,60, 220,60, 250,130, 90,130" href="states/washington.html" alt="Washington" title="Washington">
+                </map>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
